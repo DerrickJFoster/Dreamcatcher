@@ -1,6 +1,6 @@
 # Dreamcatcher
 
-![Wireframe](Images/DreamcatcherWireFrame.png)
+![Wireframe](Dreamcatcher/DreamcatcherWireFrame.png)
 
 Goals:
 •User can sign up/log in to save dreams
