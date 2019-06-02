@@ -2,10 +2,10 @@
 
 ![Wireframe](DreamcatcherWireFrame.png)
 
-Goals:
+#Goals:
 •User can sign up/log in to save dreams
 •user can edit posts
 •user can delete posts
 
-Stretch goal:
+#Stretch goal:
 •user can favorite dreams
