@@ -1,6 +1,6 @@
 # Dreamcatcher
 
-[Wireframe](/Users/derrickfoster/documents/Derrick Foster Repository/Dreamcatcher/DreamcatcherWireFrame.png)
+[Wireframe](Dreamcatcher/DreamcatcherWireFrame.png)
 
 Goals:
 •User can sign up/log in to save dreams
