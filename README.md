@@ -4,8 +4,8 @@
 
 #Goals:
 •User can sign up/log in to save dreams
-•user can edit posts
-•user can delete posts
+•User can edit posts
+•User can delete posts
 
 #Stretch goal:
-•user can favorite dreams
+•User can favorite dreams
