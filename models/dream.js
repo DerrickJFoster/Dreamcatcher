@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const dreamSchema = Schema({
-  username: String,
-  password: String
+const dreamSchema = new mongoose.Schema({
+  title: {type: String, required: true},
+  date: Date,
+  entry: String,
 })
 
-const Dreams = mongoose.model('Dreams', dreamSchema)
+const Dream = mongoose.model('Dream', dreamSchema)
 
-module.exports = Dreams
+module.exports = Dream

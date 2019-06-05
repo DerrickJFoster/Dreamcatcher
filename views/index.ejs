@@ -3,11 +3,11 @@
   <head>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <!-- <link rel="stylesheet" href="../public/css/bootstrap.css"> -->
+      <link rel="stylesheet" href="static/../public/css/main.css">
     <meta charset="utf-8">
     <title>Dreamcatcher</title>
   </head>
-  <body>
+  <body style="background-color: teal">
     <h1 align='center' style="background-color: lightblue">Welcome to Dreamcatcher</h1>
     <nav  align='center' style="padding-top:10px">
       <ul style="list-style: none" display='inline-block'>
@@ -19,6 +19,15 @@
     <hr>
     <div align='center'class="container">
       <h1>What was caught</h1>
+      <% for (let i = 0; i < dream.length; i++) { %>
+        <div class="column" style="border:2px solid black; border-radius:10px; background-color: #ade6d8">
+          <button style="float:right; border-radius:10px" type="button" name="button">Favorite</button>
+          <br>
+          <h2 style="clear: both"><%= dream[i].title %></h2><h6>(awoke on <%= dream[i].date %>)</h6>
+          <br>
+          <p style="clear: both"><%= dream[i].entry %></p>
+        </div>
+      <%}%>
 
         <!-- Display previously entered dreams -->
 
