@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>New Dream</title>
   </head>
   <body>
-    <h1>What did you dream last night?</h1>
+    <h1 align='center' style="background-color: lightblue">Welcome to Dreamcatcher</h1>
+    <nav align='center' style="padding-top:10px">
+    <ul style="list-style: none">
+        <li style="display:inline; padding: 14px; color: white;"><a href="/" style="color: black">Home</a></li>
+        <li style="display:inline; padding: 14px; ">Favorites</li>
+        <li style="display:inline; padding: 14px; background-color:skyblue; border-radius: 10px">New Dream</li>
+    </ul>
+  </nav>
+    <hr>
+    <div align='center'>
+    <h1 style="background-color: lightblue">What did you dream last night?</h1>
+
+      <form align='left' style="padding-left: 3em" class="form" action="index.html" method="post">
+        <input type="text" name="title" placeholder="Title">
+        <input type="date" name="date">
+        <br>
+        <textarea name="entry" rows="8" cols="80" placeholder="What did you dream about last night...."></textarea>
+        <br>
+        <input type="submit" name="submit" value="Add new dream">
+      </form>
+  </div>
   </body>
 </html>
