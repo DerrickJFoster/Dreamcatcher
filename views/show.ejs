@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">      <link rel="stylesheet" href="static/../public/css/main.css">
+    <meta charset="utf-8">
+    <title>Dreamcatcher</title>
+  </head>
+  <body style="background-color: teal">
+    <nav>
+      <h1 class="jumbotron">Welcome to Dreamcatcher</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>Favorites</li>
+        <li> <a href="http://localhost:3000/new">New Dream</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <div align='center'class="container">
+      <h1>What was caught</h1>
+        <div class="column" style="border:2px solid black; border-radius:10px; background-color: #ade6d8">
+          <button style="float:right; border-radius:10px" type="button" name="button">Favorite</button>
+          <br>
+          <h3 style="clear: both"><%= dream.title %></h3><h6>(awoke on <%= dream.date %>)</h6>
+          <br>
+          <p style="clear: both; padding:10px"><%= dream.entry %></p>
+          <!-- Edit -->
+          <form style="float:left" class="" action="/<%= dream.id %>/?_method=PUT" method="POST">
+            <input style="border-radius:10px" type="submit" name="edit" value="Edit Dream">
+          </form>
+          <!-- Delete -->
+          <form style="float:right" action="/<%=dream.id%>?_method=DELETE" method="POST">
+            <input style="border-radius:10px" type="submit" name="" value="Delete this Dream">
+          </form>
+        </div>
+        <!-- Display previously entered dreams -->
+
+    </div>
+  </body>
+</html>

@@ -32,6 +32,14 @@ router.get('/seed', async (req, res) => {
   }
 })
 
+//SHOW
+router.get('/:id', (req, res)=>{
+  // res.send('product here');
+  Dream.findById(req.params.id, (err, foundDream) =>{
+    res.render('show.ejs', {dream: foundDream})
+  })
+})
+
 //CREATE
 router.post('/', (req, res)=>{
   console.log('nope');
@@ -42,6 +50,14 @@ router.post('/', (req, res)=>{
   })
 })
 
+//UPDATE
+router.put('/:id/edit', (req, res)=>{
+  Dream.findByIdAndUpdate(req.params.id, req.body, (err, updatedDream) =>{
+    res.redirect('/:id')
+  })
+})
+
+//DELETE
 router.delete('/:id', (req, res)=>{
   // res.send('deleting...')
   Dream.findByIdAndRemove(req.params.id, (err, data)=>{

@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="static/../public/css/main.css">
+      <link rel="stylesheet" href="/css/bootstrap.css">
+      <link rel="stylesheet" href="/css/main.css">
     <meta charset="utf-8">
     <title>Dreamcatcher</title>
   </head>
   <body style="background-color: teal">
-    <h1 align='center' style="background-color: lightblue">Welcome to Dreamcatcher</h1>
-    <nav  align='center' style="padding-top:10px">
-      <ul style="list-style: none" display='inline-block'>
-        <li style="display:inline; padding: 14px; background-color:skyblue; border-radius: 10px">Home</li>
-        <li style="display:inline; padding: 14px">Favorites</li>
-        <li style="display:inline; padding: 14px"><button onclick="location.href='/new'"type="button" name="newDream">New Dream</button></li>
+    <nav>
+      <h1 class="jumbotron">Welcome to Dreamcatcher</h1>
+      <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li>Favorites</li>
+        <li> <a href="http://localhost:3000/new">New Dream</a></li>
       </ul>
     </nav>
-    <hr>
-    <div align='center'class="container">
-      <h1>What was caught</h1>
+    <br>
+    <div class="container">
+      <h2>All your Dreams</h2>
       <% for (let i = 0; i < dream.length; i++) { %>
-        <div class="column" style="border:2px solid black; border-radius:10px; background-color: #ade6d8">
-          <button style="float:right; border-radius:10px" type="button" name="button">Favorite</button>
+        <div class="column" id="dreams">
+          <button type="button" name="button">Favorite</button>
           <br>
-          <h2 style="clear: both"><%= dream[i].title %></h2><h6>(awoke on <%= dream[i].date %>)</h6>
+          <a href="/<%= dream[i].id %>"><h3><%= dream[i].title %></h3></a><h6>(awoke on <%= dream[i].date %>)</h6>
           <br>
-          <p style="clear: both"><%= dream[i].entry %></p>
+          <p><%= dream[i].entry %></p>
+        </div>
+        <!-- CLOUDS -->
+        <div class="cloud">
+        <div id="cloud">
+          <div id="bottom_c"></div>
+          <div id="right_c"></div>
+          <div id="left_c"></div>
+        </div>
         </div>
       <%}%>
 
         <!-- Display previously entered dreams -->
 
     </div>
-      </ul>
-    </nav>
   </body>
 </html>

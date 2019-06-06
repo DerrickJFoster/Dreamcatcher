@@ -1,3 +1,176 @@
-html {
-  background: teal;
+div {
+  align: center;
+  text-align: center;
+  align-items: center;
+}
+#dreams{
+  border:2px solid black;
+  border-radius:10px;
+  background-color: #ade6d8;
+  box-shadow: 0 8px 6px -6px black;
+
+}
+h1{
+  text-align: center;
+  font-family: fantasy;
+}
+h2{
+  font-family: fantasy;
+  clear: both;
+}
+h3{
+  text-align: center;
+  font-family: fantasy;
+  color: teal;
+  clear: both;
+}
+p{
+  clear: both;
+  padding:10px;
+}
+button{
+   float:right;
+   border-radius:10px;
+}
+button:hover{
+  background-color: blue;
+}
+a{
+  color: teal;
+}
+a:hover{
+  text-decoration: none;
+  color: skyblue;
+}
+/* NAV */
+.jumbotron{
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%; */
+}
+nav{
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  text-align: center;
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #ade6d8;
+  opacity: .3;
+  border-radius: 10px;
+}
+
+li a:hover {
+  background-color: #ade6d8;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+}
+
+/* FORM */
+form{
+  padding: 3em;
+  text-align: inherit;
+}
+input{
+  margin: 4px;
+}
+textarea{
+  margin: 2px;
+  text-align: left;
+  padding: 1em;
+}
+/* CLOUDS */
+.cloud{
+  display: inline-block;
+
+}
+body{
+    background-color: #4ca3ff;
+}
+
+#cloud {
+    height: 230px;
+    margin: 40px;
+    position: relative;
+    width: 400px;
+}
+
+#cloud div {
+    border: solid 5px black;
+    box-shadow: 0 8px 6px -6px black;
+
+}
+
+#bottom_c {
+    background-color: #fff;
+    border-radius: 100px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    width: 350px;
+    z-index: 0;
+}
+
+#right_c{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 150px;
+    left: 140px;
+    position: absolute;
+    top: 40px;
+    width: 150px;
+    z-index: -1;
+}
+
+#left_c{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 100px;
+    left: 50px;
+    position: absolute;
+    top: 70px;
+    width: 100px;
+    z-index: -1;
+}
+
+#cloud::before {
+    background-color: white;
+    border-radius: 50%;
+    content: '';
+    height: 100px;
+    left: 55px;
+    position: absolute;
+    top: 75px;
+    width: 100px;
+    z-index: 1;
+}
+
+#cloud::after {
+    position: absolute; top: 45px; left: 145px;
+    background-color: white;
+    border-radius: 50%;
+    content: '';
+    width: 150px;
+    height: 150px;
+    z-index: 1;
 }

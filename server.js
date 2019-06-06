@@ -12,6 +12,7 @@ mongoose.connection.once('open', ()=>{
 })
 //MIDDLEWARE
 app.use(express.urlencoded({extended:false}))
+app.use(express.static('public'))
 app.use(express.json())
 
 
