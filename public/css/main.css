@@ -35,7 +35,8 @@ button{
    border-radius:10px;
 }
 button:hover{
-  background-color: blue;
+  background-color: teal;
+  color: skyblue;
 }
 a{
   color: teal;

@@ -11,7 +11,7 @@
       <h1 class="jumbotron">Welcome to Dreamcatcher</h1>
       <ul>
         <li><a href="/">Home</a></li>
-        <li>Favorites</li>
+        <%#<li>Favorites</li>%>
         <li> <a href="http://localhost:3000/new">New Dream</a></li>
       </ul>
     </nav>
@@ -25,12 +25,12 @@
           <br>
           <p style="clear: both; padding:10px"><%= dream.entry %></p>
           <!-- Edit -->
-          <form style="float:left" class="" action="/<%= dream.id %>/?_method=PUT" method="POST">
-            <input style="border-radius:10px" type="submit" name="edit" value="Edit Dream">
+          <form style="float:left" action="/<%=dream.id%>/edit/?_method=GET" method="POST">
+            <input style="border-radius:10px" type="submit" value="Edit this Dream">
           </form>
           <!-- Delete -->
           <form style="float:right" action="/<%=dream.id%>?_method=DELETE" method="POST">
-            <input style="border-radius:10px" type="submit" name="" value="Delete this Dream">
+            <input style="border-radius:10px" type="submit" value="Delete this Dream">
           </form>
         </div>
         <!-- Display previously entered dreams -->

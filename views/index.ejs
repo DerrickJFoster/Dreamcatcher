@@ -11,7 +11,7 @@
       <h1 class="jumbotron">Welcome to Dreamcatcher</h1>
       <ul>
         <li><a class="active" href="/">Home</a></li>
-        <li>Favorites</li>
+      <%#  <li>Favorites</li> %>
         <li> <a href="http://localhost:3000/new">New Dream</a></li>
       </ul>
     </nav>
@@ -20,7 +20,7 @@
       <h2>▼  All your Dreams  ▼</h2>
       <% for (let i = 0; i < dream.length; i++) { %>
         <div class="column" id="dreams">
-          <button type="button" name="button">Favorite</button>
+          <%#<button type="button" name="button">Favorite</button>%>
           <br>
           <a href="/<%= dream[i].id %>"><h3><%= dream[i].title %></h3></a><h6>(awoke on <%= dream[i].date %>)</h6>
           <br>

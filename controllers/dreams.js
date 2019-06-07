@@ -40,6 +40,13 @@ router.get('/:id', (req, res)=>{
   })
 })
 
+//EDIT
+router.get('/:id/edit', (req, res)=>{
+  Dream.findById(req.params.id, (err, editDream)=>{
+    res.render('edit.ejs', {dream: editDream})
+  })
+})
+
 //CREATE
 router.post('/', (req, res)=>{
   console.log('nope');
@@ -51,9 +58,9 @@ router.post('/', (req, res)=>{
 })
 
 //UPDATE
-router.put('/:id/edit', (req, res)=>{
+router.put('/:id', (req, res)=>{
   Dream.findByIdAndUpdate(req.params.id, req.body, (err, updatedDream) =>{
-    res.redirect('/:id')
+    res.redirect('/')
   })
 })
 
