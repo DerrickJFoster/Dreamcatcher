@@ -16,21 +16,22 @@ router.get('/new', (req, res) => {
 })
 
 //SEED
-router.get('/seed', async (req, res) => {
-  const newDream =
-    [{
-        title: 'Beans',
-        date: '04/20/1969',
-        entry: 'A small pile of beans. Buy more beans for a big pile of beans.',
-      }]
-
-  try {
-    const seedDreams = await Product.create(newDreams)
-    res.send(seedDreams)
-  } catch (err) {
-    res.send(err.message)
-  }
-})
+//Havent figured out how to get the SEED to work yet
+// router.get('/seed', async (req, res) => {
+//   const newDream =
+//     [{
+//         title: 'Your First Dream',
+//         date: '04/20/1969',
+//         entry: 'A small pile of beans. Buy more beans for a big pile of beans.',
+//       }]
+//
+//   try {
+//     const seedDreams = await Product.create(newDreams)
+//     res.send(seedDreams)
+//   } catch (err) {
+//     res.send(err.message)
+//   }
+// })
 
 //SHOW
 router.get('/:id', (req, res)=>{
