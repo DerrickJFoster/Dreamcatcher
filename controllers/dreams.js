@@ -15,23 +15,23 @@ router.get('/new', (req, res) => {
     res.render('new.ejs');
 })
 
-//SEED
-//Havent figured out how to get the SEED to work yet
-// router.get('/seed', async (req, res) => {
-//   const newDream =
-//     [{
-//         title: 'Your First Dream',
-//         date: '04/20/1969',
-//         entry: 'A small pile of beans. Buy more beans for a big pile of beans.',
-//       }]
-//
-//   try {
-//     const seedDreams = await Product.create(newDreams)
-//     res.send(seedDreams)
-//   } catch (err) {
-//     res.send(err.message)
-//   }
-// })
+// SEED
+// Havent figured out how to get the SEED to work yet
+router.get('/seed', async (req, res) => {
+  const newDream =
+    [{
+        title: 'Your First Dream',
+        date: '04/20/1969',
+        entry: 'Welcome to Dreamcatcher, a safe space to log all of your dreams for study/hobby/spiritual reasons! It\'s super easy to use, all you do is click on "New Dream" and it will take you right to the dream form. You\'ll give it a relevant title, date it and describe what happened in your dream and maybe even how it made you feel or it\'s effect on your day! Thank you for joining us here on Dreamcatcher!',
+      }]
+
+  try {
+    const seedDreams = await Dream.create(newDream)
+    res.send(seedDreams)
+  } catch (err) {
+    res.send(err.message)
+  }
+})
 
 //SHOW
 router.get('/:id', (req, res)=>{
