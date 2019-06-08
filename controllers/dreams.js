@@ -27,7 +27,8 @@ router.get('/seed', async (req, res) => {
 
   try {
     const seedDreams = await Dream.create(newDream)
-    res.send(seedDreams)
+    // res.send(seedDreams)
+    res.redirect('/')
   } catch (err) {
     res.send(err.message)
   }
