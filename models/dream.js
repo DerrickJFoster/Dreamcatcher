@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const dreamSchema = new mongoose.Schema({
   title: {type: String, required: true},
-  date: Date,
+  date: {type: Date, required: true},
   entry: String,
 })
 

@@ -22,7 +22,7 @@ router.get('/seed', async (req, res) => {
     [{
         title: 'Your First Dream',
         date: '04/20/1969',
-        entry: 'Welcome to Dreamcatcher, a safe space to log all of your dreams for study/hobby/spiritual reasons! It\'s super easy to use, all you do is click on "New Dream" and it will take you right to the dream form. You\'ll give it a relevant title, date it and describe what happened in your dream and maybe even how it made you feel or it\'s effect on your day! Thank you for joining us here on Dreamcatcher!',
+        entry: 'Welcome to Dreamcatcher, a safe space to log all of your dreams for study/hobby/spiritual reasons! It\'s super easy to use, all you do is click on "New Dream" and it will take you right to the dream form. You\'ll give it a relevant title, date it and describe what happened in your dream and maybe even how it made you feel or it\'s effect on your day! Thank you for joining us here on Dreamcatcher! - Love the Dreamcatcher Staff',
       }]
 
   try {
