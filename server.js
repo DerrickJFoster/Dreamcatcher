@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
+const usersController = require('./controllers/users');
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/products'
 const methodOverride = require('method-override');
 const dreamsController = require('./controllers/dreams');
+const session = require('express-session');
+const sessionsController = require('./controllers/sessions');
 const dotenv = require('dotenv');
 app.use(methodOverride('_method'))
 
@@ -16,8 +19,13 @@ mongoose.connection.once('open', ()=>{
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'))
 app.use(express.json())
-
-
+app.use(session({
+  secret: "secret123456789",
+  resave: false,
+  saveUninitialized: false,
+}))
+app.use('/sessions', sessionsController)
+app.use('/users', usersController)
 app.use('/', dreamsController)
 
 //listener

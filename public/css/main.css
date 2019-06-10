@@ -46,12 +46,8 @@ a:hover{
   color: skyblue;
 }
 /* NAV */
-.jumbotron{
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%; */
+.account{
+  float: right;
 }
 nav{
   text-align: center;
@@ -61,6 +57,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  clear: both;
 }
 
 li {
