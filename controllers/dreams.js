@@ -6,7 +6,7 @@ const Dream = require('../models/dream');
 //ROUTES
 router.get('/', (req, res)=>{
     Dream.find({}, (error, allDreams)=>{
-    res.render('index.ejs', {dream: allDreams}, {currentUser: req.session.currentUser});
+    res.render('index.ejs', {dream: allDreams, currentUser: req.session.currentUser});
   })
 })
 //NEW

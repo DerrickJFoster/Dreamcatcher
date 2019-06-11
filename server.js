@@ -15,18 +15,22 @@ mongoose.connect(MONGODB_URI,{useNewUrlParser: true});
 mongoose.connection.once('open', ()=>{
   console.log('connected to mongo');
 })
+
+
 //MIDDLEWARE
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'))
-app.use(express.json())
 app.use(session({
-  secret: "secret123456789",
+  secret: "keeperofthedreams",
   resave: false,
   saveUninitialized: false,
 }))
-app.use('/sessions', sessionsController)
-app.use('/users', usersController)
+
 app.use('/', dreamsController)
+app.use('/users', usersController)
+app.use('/sessions', sessionsController)
+app.use(express.json())
+
 
 //listener
 app.listen(port, ()=>{
